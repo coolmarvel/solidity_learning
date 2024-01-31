@@ -24,4 +24,17 @@ contract GlobalVariable {
     uint public blockDifficulty = block.prevrandao;
     uint public gasLimit = block.gaslimit;
     uint public blockTimestamp = block.timestamp;
+
+    // Message data
+    bytes public msgData;
+    address public msgSender;
+    bytes4 public msgSig;
+    uint public msgValue;
+
+    function msgTest(uint8 a) public payable {
+        msgData = msg.data;
+        msgSender = msg.sender;
+        msgSig = msg.sig;
+        msgValue = msg.value;
+    }
 }

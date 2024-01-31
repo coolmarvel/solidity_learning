@@ -49,5 +49,16 @@ describe("GlobalVariable test", () => {
       console.log("gasLimit: ", (await variable.gasLimit()).toString());
       console.log("blockTimestamp: ", (await variable.blockTimestamp()).toString());
     });
+
+    it("Message data", async () => {
+      const { variable } = await deployContract();
+
+      await variable.msgTest(1, { value: 1 });
+
+      console.log("msgData: ", (await variable.msgData()).toString());
+      console.log("msgSender: ", (await variable.msgSender()).toString());
+      console.log("msgSig: ", (await variable.msgSig()).toString());
+      console.log("msgValue: ", (await variable.msgValue()).toString());
+    });
   });
 });
