@@ -35,5 +35,19 @@ describe("GlobalVariable test", () => {
       console.log("daysUnit: ", (await variable.daysUnit()).toString());
       console.log("weeksUnit: ", (await variable.weeksUnit()).toString());
     });
+
+    it("Block data", async () => {
+      const { variable } = await deployContract();
+
+      console.log("blockNumber: ", (await variable.blockNumber()).toString());
+      console.log("baseFee: ", (await variable.baseFee()).toString());
+      console.log("blockHash: ", (await variable.blockHash()).toString());
+      console.log("oldBlockHash: ", (await variable.oldBlockHash()).toString());
+      console.log("chainId: ", (await variable.chainId()).toString());
+      console.log("addressCoinbase: ", (await variable.addressCoinbase()).toString());
+      console.log("blockDifficulty: ", (await variable.blockDifficulty()).toString());
+      console.log("gasLimit: ", (await variable.gasLimit()).toString());
+      console.log("blockTimestamp: ", (await variable.blockTimestamp()).toString());
+    });
   });
 });

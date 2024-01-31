@@ -13,4 +13,15 @@ contract GlobalVariable {
     uint public hoursUnit = 1 hours;
     uint public daysUnit = 1 days;
     uint public weeksUnit = 1 weeks;
+
+    // Block data
+    uint public blockNumber = block.number;
+    uint public baseFee = block.basefee;
+    bytes32 public blockHash = blockhash(blockNumber);
+    bytes32 public oldBlockHash = blockhash(blockNumber - 257);
+    uint public chainId = block.chainid;
+    address public addressCoinbase = block.coinbase;
+    uint public blockDifficulty = block.prevrandao;
+    uint public gasLimit = block.gaslimit;
+    uint public blockTimestamp = block.timestamp;
 }
