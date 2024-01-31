@@ -60,5 +60,12 @@ describe("GlobalVariable test", () => {
       console.log("msgSig: ", (await variable.msgSig()).toString());
       console.log("msgValue: ", (await variable.msgValue()).toString());
     });
+
+    it("Transaction data", async () => {
+      const { variable } = await deployContract();
+
+      console.log("gasPrice: ", (await variable.gasPrice()).toString());
+      console.log("origin: ", (await variable.origin()).toString());
+    });
   });
 });

@@ -37,4 +37,8 @@ contract GlobalVariable {
         msgSig = msg.sig;
         msgValue = msg.value;
     }
+
+    // Transaction data
+    uint public gasPrice = tx.gasprice;
+    address public origin = tx.origin;
 }
