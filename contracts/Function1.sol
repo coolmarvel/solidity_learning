@@ -6,12 +6,12 @@ import "hardhat/console.sol";
 contract Function1 {
     uint public stateValue = 30;
 
-    function function1() public pure {
+    function function1() public {
         uint localValue = 30;
         console.log("function1 call", localValue);
     }
 
-    function functionParam(uint a) public pure {
+    function functionParam(uint a) public {
         console.log("a: ", a);
     }
 
@@ -21,15 +21,15 @@ contract Function1 {
         _privateFunction();
     }
 
-    function internalFunction() internal pure {
+    function internalFunction() internal {
         console.log("internal call");
     }
 
-    function externalFunction() external pure {
+    function externalFunction() external {
         console.log("external call");
     }
 
-    function _privateFunction() private pure {
+    function _privateFunction() private {
         console.log("private call");
     }
 }

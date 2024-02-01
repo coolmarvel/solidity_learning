@@ -21,14 +21,10 @@ describe("Function1 test", () => {
     it("function1", async () => {
       const { function1 } = await deployContract();
 
-      console.log("stateValue: ", await function1.stateValue());
-
+      console.log("stateValue: ", (await function1.stateValue()).toString());
       await function1.function1();
-
       await function1.functionParam(55);
-
       await function1.publicFunction();
-
       await function1.externalFunction();
     });
   });
