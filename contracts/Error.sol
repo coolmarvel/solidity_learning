@@ -7,7 +7,7 @@ contract Error {
   }
   // Error: VM Exception while processing transaction: reverted with panic code 0x1 (Assertion error)
 
-  function devidedByZero(uint num1, uint num2) public pure {
+  function dividedByZero(uint num1, uint num2) public pure {
     num1 / num2;
   }
   // Error: VM Exception while processing transaction: reverted with panic code 0x12 (Division or modulo division by zero)
