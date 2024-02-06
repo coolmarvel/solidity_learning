@@ -24,10 +24,10 @@ describe("Error test", () => {
       await error.executeAssert(false);
     });
 
-    it("devidedByZero", async () => {
+    it("dividedByZero", async () => {
       const { error } = await deployContract();
 
-      await error.devidedByZero(1, 0);
+      await error.dividedByZero(1, 0);
     });
 
     it("overflow", async () => {
