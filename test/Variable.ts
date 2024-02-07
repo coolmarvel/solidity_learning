@@ -4,7 +4,7 @@ describe("Variable test", () => {
   async function deployContract() {
     const [owner, otherAccount] = await ethers.getSigners();
 
-    const Variable = await ethers.getContractFactory("Variable");
+    const Variable = await ethers.getContractFactory("Variable", owner);
     const variable = await Variable.deploy();
 
     return { owner, variable };
@@ -34,7 +34,8 @@ describe("Variable test", () => {
       const { variable } = await deployContract();
 
       console.log("addressValue: ", await variable.addressValue());
-      console.log("defaultAddressValue: ", await variable.defaultAddressValue());
+      console.log("defaultAddressValue: ", await variable.defaultAddressValue()
+      );
     });
 
     it("byte", async () => {

@@ -18,10 +18,10 @@ contract Error {
   // Error: VM Exception while processing transaction: reverted with panic code 0x11 (Arithmetic operation underflowed or overflowed outside of an unchecked block)
 
   function executeRevert(uint num) public pure {
-    if (num <= 0) revert('Revert: num must be gt 0');
+    if (num <= 0) revert("Revert: num must be gt 0");
   }
 
   function executeRequire(uint num) public pure {
-    require(num > 0, 'Require: num must be gt 0');
+    require(num > 0, "Require: num must be gt 0");
   }
 }
