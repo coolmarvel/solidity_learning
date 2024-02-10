@@ -9,7 +9,7 @@ const config: HardhatUserConfig = {
       accounts: {
         mnemonic: "test test test test test test test test test test test junk",
         initialIndex: 0,
-        accountsBalance: "10000000000000000000",
+        accountsBalance: "10000000000000000000000000",
       },
       blockGasLimit: 30000000,
     },
