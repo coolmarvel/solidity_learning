@@ -2,7 +2,10 @@ import { HardhatUserConfig } from "hardhat/config";
 import "@nomicfoundation/hardhat-toolbox";
 
 const config: HardhatUserConfig = {
-  solidity: "0.8.19",
+  solidity: {
+    compilers: [{ version: "0.8.9" }],
+    overrides: {},
+  },
   networks: {
     hardhat: {
       forking: { url: "https://rpc.ankr.com/klaytn" },
@@ -12,6 +15,13 @@ const config: HardhatUserConfig = {
         accountsBalance: "10000000000000000000000000",
       },
       blockGasLimit: 30000000,
+    },
+    baobab: {
+      url: "https://api.baobab.klaytn.net:8651",
+      chainId: 1001,
+      accounts: require("./baobab.json").privateKey,
+      gas: 20000000,
+      gasPrice: 250000000000,
     },
   },
 };

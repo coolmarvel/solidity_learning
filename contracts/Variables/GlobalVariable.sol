@@ -21,7 +21,7 @@ contract GlobalVariable {
   bytes32 public oldBlockHash = blockhash(blockNumber - 257);
   uint public chainId = block.chainid;
   address public addressCoinbase = block.coinbase;
-  uint public blockDifficulty = block.prevrandao;
+  uint public blockDifficulty = block.difficulty; // block.prevrandao
   uint public gasLimit = block.gaslimit;
   uint public blockTimestamp = block.timestamp;
 
