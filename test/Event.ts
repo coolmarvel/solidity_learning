@@ -15,7 +15,7 @@ describe("Event test", () => {
       const { owner, event } = await deployContract();
 
       console.log("owner: ", owner.address);
-      console.log("address: ", await event.getAddress());
+      console.log("address: ", event.address);
     });
 
     it("Borrow", async () => {
