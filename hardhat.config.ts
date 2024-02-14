@@ -6,6 +6,7 @@ import "hardhat-gas-reporter";
 import "solidity-coverage";
 import "hardhat-deploy";
 import "@nomiclabs/hardhat-ethers";
+import "@nomicfoundation/hardhat-ethers";
 
 const config: HardhatUserConfig = {
   solidity: {
